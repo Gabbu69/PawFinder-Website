@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Product | PawFinder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #fff4e6, #ffffff);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 22px;
+      font-weight: 600;
+      color: #ff7200;
+      margin-top: 5px;
+    }
+
+    .product-form {
+      background-color: #ffffff;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .product-form h2 {
+      margin-bottom: 25px;
+      color: #ff7200;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .product-form input,
+    .product-form textarea {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      font-size: 15px;
+      color: #333;
+      background: #fdfdfd;
+      transition: border-color 0.2s ease;
+    }
+
+    .product-form input:focus,
+    .product-form textarea:focus {
+      outline: none;
+      border-color: #ff7200;
+    }
+
+    .product-form textarea::placeholder,
+    .product-form input::placeholder {
+      color: #999;
+    }
+
+    .product-form button {
+      background-color: #ff7200;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .product-form button:hover {
+      background-color: #e56200;
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 480px) {
+      .product-form {
+        padding: 25px;
+        border-radius: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="ChatGPT_Image_Apr_25__2025__04_45_48_PM-removebg-preview (1).png" alt="PawFinder Logo">
+    <span>PawFinder Kabacan</span>
+  </div>
+
+  <form class="product-form" action="add_product.php" method="POST">
+    <h2>Add New Product</h2>
+    <input type="text" name="product_name" placeholder="Product Name" required>
+    <textarea name="description" placeholder="Description" rows="4" required></textarea>
+    <input type="number" step="0.01" name="price" placeholder="Price (e.g. 99.99)" required>
+    <button type="submit">Add Product</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawFinder Kabacan</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="design.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+        <img src="ChatGPT_Image_Apr_25__2025__04_45_48_PM-removebg-preview (1).png" alt="PawFinder Kabacan" class="logo-img">
+        <span class="logo-text">PawFinder Kabacan</span>
+      </div>
+      <nav>
+            <li><a href="HomePage.html" style="color:orange">Home</a></li>
+            <li><a href="Map.html">Map</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a onclick="scrollToSpot()" class="">Contact</a></li>
+    </nav>
+    <button class="cta-button" onclick="location.href='login.html'">Login</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to <br> PawFinder Kabacan</h1>
+      <p>Discover a world of tail-wagging delight deals and purrfect finds in Kabacan.</p>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for pet food, toys, shops...">
+        <button>Search</button>
+      </div>
+    </div>
+    <div class="dogcat">
+      <img src="image1.png" alt="Dog and Cat">
+    </div>
+  </section>
+
+  <!-- ===== Map Locator Section ===== -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="title" style="text-align:center; margin-bottom:30px;">Find Our Locations</h2>
+        <div class="row">
+            <div class="col-3">
+                <h3 style="text-align:center;">Paw Stuffs Petshop</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15836.520732209041!2d124.81218305541995!3d7.110908599999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f88d98619aa811%3A0x7740af9cfbc870e4!2sPaw%20Stuffs%20Petshop!5e0!3m2!1sen!2sph!4v1745647620632!5m2!1sen!2sph" 
+                    width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-3">
+                <h3 style="text-align:center;">Paws N Furr Supplies</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15836.520732209041!2d124.81218305541995!3d7.110908599999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f88d75f754158f%3A0xc54465639739c60b!2sPaws%20N%20Furr%20pet%20supplies%20and%20grooming!5e0!3m2!1sen!2sph!4v1745647641442!5m2!1sen!2sph" 
+                    width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-3">
+                <h3 style="text-align:center;">Owing's Pet Corner</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d402.9781807970557!2d124.83006185051366!3d7.111857256161421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1745647737088!5m2!1sen!2sph" 
+                    width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!------ footer ------>
+<div class="footer">
+    <div id="hereOh"></div>
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img src="ChatGPT_Image_Apr_25__2025__04_45_48_PM-removebg-preview (1).png" width="200px">
+                <p>@2025 PawFinder Kabacan | Built with ❤️ for pet lovers. </p>
+            </div>
+            <div class="footer-col-4">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/Gabbu69" id="myLink" class="link">Facebook</a></li>
+                    <li>Phone: 09319761558</li>
+                    <li>Email: gabrielusm6969@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<script>
+    function searchProducts() {
+        var input = document.getElementById('search-input').value.toLowerCase();
+        alert("Searching for: " + input);
+        // Add your search functionality here later
+    }
+</script>
+
+
+<!------ js for toggle menu ------>
+<script>
+var MenuItems = document.getElementById("MenuItems");
+
+MenuItems.style.maxHeight = "0px";
+
+
+function menutoggle(){
+    if(MenuItems.style.maxHeight == "0px"){
+        MenuItems.style.maxHeight = "200px"
+    }
+    else {
+        MenuItems.style.maxHeight = "0px"
+    }
+}
+</script>
+<!------ js for facebook link ------>
+<script>
+document.getElementById('myLink').addEventListener('click', function(e) {e.preventDefault();
+var url = 'https://www.facebook.com/Gabbu69';
+window.open(url, '_blank');
+}); 
+</script>
+<!------ js for contact in header ------>
+<script>
+function scrollToSpot() {
+var targetSpot = document.getElementById('hereOh');
+targetSpot.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

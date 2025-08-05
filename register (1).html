@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - PawFinder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(#fff, #ffd6d6);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 22px;
+      font-weight: 600;
+      color: #ff7200;
+      margin-top: 5px;
+    }
+
+    .register-container {
+      background: #fff;
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .submit-btn {
+      background: #ff7200;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background: #e55d00;
+      transform: scale(1.02);
+    }
+
+    .login-link {
+      margin-top: 15px;
+      display: block;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .form-group {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      fill: #777;
+    }
+
+    @media (max-width: 480px) {
+      .register-container {
+        padding: 25px;
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="ChatGPT_Image_Apr_25__2025__04_45_48_PM-removebg-preview (1).png" alt="PawFinder Logo" />
+    <span>PawFinder Kabacan</span>
+  </div>
+
+  <div class="register-container">
+    <h2>Create Your Shop Account</h2>
+    <form action="register.php" method="POST">
+      <input type="text" name="shopName" placeholder="Shop Name" required />
+      <input type="text" name="ownerName" placeholder="Owner Name" required />
+
+      <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Password" required />
+        <img class="toggle-password" src="eye-svgrepo-com.svg" alt="Toggle Password Visibility" onclick="togglePassword('password', this)" />
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required />
+        <img class="toggle-password" src="eye-svgrepo-com.svg" alt="Toggle Password Visibility" onclick="togglePassword('confirmPassword', this)" />
+      </div>
+
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="text" name="contact" placeholder="Contact Information" required />
+      <input type="text" name="location" placeholder="Location (Kabacan)" required />
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+    <a href="login.html" class="login-link">Already have an account? Login here</a>
+  </div>
+
+  <script>
+    function togglePassword(fieldId, icon) {
+      const input = document.getElementById(fieldId);
+      const isVisible = input.type === "text";
+      input.type = isVisible ? "password" : "text";
+      icon.src = isVisible ? "eye-closed-svgrepo-com.svg" : "eye-svgrepo-com.svg";
+    }
+  </script>
+
+</body>
+</html>

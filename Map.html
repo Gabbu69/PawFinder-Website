@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop Locations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Make iframe container responsive */
+        .map-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .map-responsive {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .map-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Optional: Basic Styling */
+        body {
+            font-family: sans-serif, "Poppins";
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Items -->
+    <header>
+        <div class="logo-container">
+            <img src="ChatGPT_Image_Apr_25__2025__04_45_48_PM-removebg-preview (1).png" alt="PawFinder Kabacan" class="logo-img">
+            <span class="logo-text">PawFinder Kabacan</span>
+          </div>
+          <nav>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="Map.html" style="color:orange">Map</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a onclick="scrollToSpot()" class="">Contact</a></li>
+        </nav>
+        <button class="cta-button" onclick="location.href='login.html'">Login</button>
+      </header>
+
+    <!-- Container for Pet Shop Locations -->
+    <div class="row">
+        <div class="col-2">
+            <h1>Pet Shop Locations</h1>
+
+        <!-- Map Section -->
+        <div class="map-container">
+
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15836.520732209041!2d124.81218305541995!3d7.110908599999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f88d98619aa811%3A0x7740af9cfbc870e4!2sPaw%20Stuffs%20Petshop!5e0!3m2!1sen!2sph!4v1745647620632!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15836.520732209041!2d124.81218305541995!3d7.110908599999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32f88d75f754158f%3A0xc54465639739c60b!2sPaws%20N%20Furr%20pet%20supplies%20and%20grooming!5e0!3m2!1sen!2sph!4v1745647641442!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d402.9781807970557!2d124.83006185051366!3d7.111857256161421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1745647737088!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!------ footer ------>
+<div class="footer">
+    <div id="hereOh"></div>
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img src="ChatGPT_Image_Apr_25__2025__04_45_48_PM-removebg-preview (1).png" >
+                <p>@2025 PawFinder Kabacan | Built with ❤️ for pet lovers. </p>
+            </div>
+            <div class="footer-col-4">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/Gabbu69" id="myLink" class="link">Facebook</a></li>
+                    <li>Phone: 09319761558</li>
+                    <li>Email: gabrielusm6969@gmail.com</li>
+                </ul>
+            </div>
+
+            <!------ js for toggle menu ------>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+            <!------ js for facebook link ------>
+<script>
+    document.getElementById('myLink').addEventListener('click', function(e) {e.preventDefault();
+    var url = 'https://www.facebook.com/Gabbu69';
+    window.open(url, '_blank');
+    }); 
+    </script>
+    <!------ js for contact in header ------>
+    <script>
+    function scrollToSpot() {
+    var targetSpot = document.getElementById('hereOh');
+    targetSpot.scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+
+</body>
+</html>

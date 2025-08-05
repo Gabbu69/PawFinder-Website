@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="ChatGPT_Image_Apr_25__2025__04_45_48_PM-removebg-preview (1).png" alt="PawFinder Kabacan" class="logo-img">
+            <span class="logo-text">PawFinder Kabacan</span>
+          </div>
+          <nav>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="Map.html">Map</a></li>
+                <li><a href="about.html" style="color:orange">About</a></li>
+                <li><a onclick="scrollToSpot()" class="">Contact</a></li>
+        </nav>
+        <button class="cta-button" onclick="location.href='login.html'">Login</button>
+      </header>
+        <div class="row">
+            <div class="col-2">
+                <h1>About PawFinder</h1>
+        
+                <h3>Our Story</h3>
+                <p style="text-align: justify;">
+                    At PawFinder, we believe that pets are more than just animals—they’re family. Our journey started with a simple goal: to make it easier for pet owners in Kabacan to find the supplies their pets need. Instead of browsing multiple stores or guessing where to go, PawFinder connects you to local pet shops that have the products you're looking for—quickly and easily.
+                </p>
+        
+                <br>
+        
+                <h3>Our Mission</h3>
+        
+                <h4>Local Pet Supply Search Made Simple:</h4>
+                <p style="text-align: justify;">
+                    PawFinder is designed to help pet owners search for specific products—like “Pedigree dog food”—and instantly see which stores in Kabacan carry them. No more guesswork, no more wasted trips.
+                </p>
+        
+                <h4>Supporting Local Stores:</h4>
+                <p style="text-align: justify;">
+                    By showcasing products from nearby pet supply shops, PawFinder helps support small businesses and keeps the local pet care community strong and connected.
+                </p>
+        
+                <h4>Reliable Information, Tailored for You:</h4>
+                <p style="text-align: justify;">
+                    We provide accurate and updated listings so you can always trust the information you find. Whether you're an experienced pet parent or new to caring for a furry friend, we're here to help you make informed choices.
+                </p>
+        
+                <br>
+        
+                <h3>What Sets PawFinder Apart</h3>
+        
+                <h4 style="font-weight: bold;">Kabacan-Focused:</h4>
+                <p style="text-align: justify;">
+                    We spotlight real-time listings from pet shops around Kabacan to bring you closer to the products your pet needs.
+                </p>
+        
+                <h4 style="font-weight: bold;">Quick & Easy Search:</h4>
+                <p style="text-align: justify;">
+                    Type in what you need, and we’ll show you where to find it.
+                </p>
+        
+                <h4 style="font-weight: bold;">Built with Pets in Mind:</h4>
+                <p style="text-align: justify;">
+                    Every part of PawFinder is designed to support the health, happiness, and well-being of your pets.
+                </p>
+        
+                <br>
+        
+                <h3>Stay Connected</h3>
+                <p style="text-align: justify;">
+                    PawFinder is your reliable companion in discovering local pet supply options. Explore, search, and shop smarter—because your pet deserves the best. Follow us for pet care tips, shop features, and updates from the Kabacan pet community.
+                    <br><br>
+                    PawFinder – Find It. Fetch It. Locally.
+                </p>
+        
+                <br><br><br><br>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!------ footer ------>
+<div class="footer">
+    <div id="hereOh"></div>
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img src="ChatGPT_Image_Apr_25__2025__04_45_48_PM-removebg-preview (1).png" width="200px">
+                <p>@2025 PawFinder Kabacan | Built with ❤️ for pet lovers. </p>
+            </div>
+            <div class="footer-col-4">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/Gabbu69" id="myLink" class="link">Facebook</a></li>
+                    <li>Phone: 09319761558</li>
+                    <li>Email: gabrielusm6969@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+
+<!------ js for toggle menu ------>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px"){
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+<!------ js for view offers in header ------>
+    <script>
+        function scrollToHere() {
+        var targetSpot = document.getElementById('targetSpot');
+        targetSpot.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+<!------ js for facebook link ------>
+    <script>
+        document.getElementById('myLink').addEventListener('click', function(e) {e.preventDefault();
+        var url = 'https://www.facebook.com/Gabbu69';
+        window.open(url, '_blank');
+    }); 
+    </script>
+<!------ js for contact in header ------>
+    <script>
+        function scrollToSpot() {
+        var targetSpot = document.getElementById('hereOh');
+        targetSpot.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
